@@ -82,7 +82,6 @@
   const button = document.getElementById("go");
   const frame = document.getElementById("results");
 
-  // When user searches
   function runSearch() {
     const q = encodeURIComponent(input.value);
     window.location.href = "antranet.html?search=" + q;
@@ -94,13 +93,12 @@
     if (e.key === "Enter") runSearch();
   });
 
-  // Load results if ?search= exists
   const params = new URLSearchParams(window.location.search);
   const query = params.get("search");
 
   if (query) {
     input.value = query;
-    frame.src = "https://duckduckgo.com/lite/?q=" + encodeURIComponent(query);
+    frame.src = "https://searx.be/search?q=" + encodeURIComponent(query);
   }
 </script>
 
