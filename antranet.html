@@ -82,9 +82,10 @@
   const button = document.getElementById("go");
   const frame = document.getElementById("results");
 
+  // When user searches
   function runSearch() {
     const q = encodeURIComponent(input.value);
-    window.location.href = "?search=" + q;
+    window.location.href = "antranet.html?search=" + q;
   }
 
   button.addEventListener("click", runSearch);
